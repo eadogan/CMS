@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 public class Review {
 
     String userId;
+
     String status;
 
 }

@@ -1,4 +1,8 @@
 package springfive.cms.domain.models;
 
-public class Role {
+public enum Role {
+
+    AUTHOR,
+
+    REVIEWER
 }

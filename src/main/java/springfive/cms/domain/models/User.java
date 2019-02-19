@@ -6,7 +6,10 @@ import lombok.Data;
 public class User {
 
     String id;
+
     String identify;
+
     String name;
+
     String role;
 }
