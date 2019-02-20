@@ -1,5 +1,6 @@
 package springfive.cms.domain.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class UserResource {
     }
 
     @PostMapping
-    public ResponseEntity<User> saveUser(User user){
+    public ResponseEntity<User> saveUser(@RequestBody User user){
         return new ResponseEntity<>(new User(), HttpStatus.CREATED);
     }
 
@@ -33,8 +34,8 @@ public class UserResource {
     }
 
     @PatchMapping(value = "/id")
-    public void deleteUser(@PathVariable("/id")String id){
-        //ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseEntity deleteUser(@PathVariable("/id")String id){
+        return ResponseEntity.noContent().build();
     }
 
 }
