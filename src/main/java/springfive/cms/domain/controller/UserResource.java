@@ -34,7 +34,7 @@ public class UserResource {
     }
 
     @PatchMapping(value = "/id")
-    public ResponseEntity deleteUser(@PathVariable("/id")String id){
+    public ResponseEntity deleteUser(@PathVariable("id")String id){
         return ResponseEntity.noContent().build();
     }
 
