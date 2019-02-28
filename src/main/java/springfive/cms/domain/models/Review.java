@@ -13,4 +13,8 @@ public class Review {
 
     String status;
 
+    public Review(String userId, String status) {
+        this.userId = userId;
+        this.status = status;
+    }
 }
